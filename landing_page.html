@@ -1,0 +1,184 @@
+<html>
+  <head>
+    <title>Contact Us | Customer Support</title>
+    <script>
+      var dataLayer = [{
+        pageName: "User Form",
+        pageTitle: "User Form | Customer Support",
+        formDetails: {
+          fullName: "",
+          email: "",
+          phoneNumber: "",
+          address: "",
+          city: "",
+        }
+      }];
+      var imgSelected = false;
+      var selectImgId = "";
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T7NP2BJ");
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK0L1S8L3E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VK0L1S8L3E');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T7NP2BJ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <style>
+      .mb-3 {
+        margin: 2%;
+        line-height: 25px;
+        align-content:center;
+      }
+    </style>
+    <div
+      class="container-fluid"
+      style="margin-top: 1%; text-align: center; margin-bottom: 3%"
+    >
+      <div class="header-content">
+        <h1>Contact Us</h1>
+      </div>
+    </div>
+    <div
+      class="container"
+      style="margin-top: 3%; align-content: center; width: 30%"
+    >
+      <form id="userForm" class="userInfoForm" action="image_page.html">
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fullName"
+            oninput="onInputValue('fullName', event)"
+            placeholder="For example: 'John Wick'"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            oninput="onInputValue('email', event)"
+            placeholder="name@example.com"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="phoneNumber" class="form-label">Phone Number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phoneNumber"
+            oninput="onInputValue('phoneNumber', event)"
+            onkeypress="validateNumber(event)"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Address</label>
+          <textarea
+            class="form-control"
+            id="address"
+            rows="3"
+            style="resize: none"
+            oninput="onInputValue('address', event)"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <select class="form-control" id="city" required onchange="onInputValue('city', event)">
+              <option>Select City</option>
+              <option value="New Delhi">New Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Pune">Pune</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Amravati">Amravati</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Kochi">Kochi</option>
+              <option value="Bhopal">Bhopal</option>
+              <option value="Kolkata">Kolkata</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" id="submit" type="submit" style="margin-left:48%">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      function validateNumber(event) {
+        var theEvent = event || window.event;
+        // Handle paste
+        if (theEvent.type === "paste") {
+          key = event.clipboardData.getData("text/plain");
+        } else {
+          // Handle key press
+          var key = theEvent.keyCode || theEvent.which;
+          key = String.fromCharCode(key);
+        }
+        var regex = /[0-9]|\./;
+        if (!regex.test(key)) {
+          theEvent.returnValue = false;
+          if (theEvent.preventDefault) theEvent.preventDefault();
+        }
+      }
+
+      function onInputValue(id, event) {
+          dataLayer[0].formDetails[id] = event.target.value;
+      }
+    </script>
+  </body>
+</html>

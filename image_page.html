@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <title>User Verification | Customer Support</title>
+    <script>
+      var dataLayer = [{
+        pageName: "User Verification",
+        pageTitle: "User Verification | Customer Support",
+        formDetails: {
+          imageSelected: {
+            imageName: "",
+            imageSource: "",
+          },
+        },
+      }];
+      var imgSelected = false;
+      var selectImgId = "";
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T7NP2BJ");
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK0L1S8L3E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VK0L1S8L3E');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T7NP2BJ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div
+      class="container-fluid"
+      style="margin-top: 1%; text-align: center; margin-bottom: 3%"
+    >
+      <div class="header-content">
+        <h1>Please select any image from below:</h1>
+      </div>
+    </div>
+    <div class="container overflow-hidden" style="text-align: center">
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            src="./assets/images.jpg"
+            id="bicycle"
+            class="rounded float-start"
+            alt="..."
+            onclick="onImgSelect('bicycle')"
+            style="
+              border: #cbc9c9 3px solid;
+              border-radius: 25px;
+              width: 150px;
+              height: 150px;
+            "
+          />
+        </div>
+        <div class="col-md-2">
+          <img
+            src="./assets/images23.jpg"
+            id="car"
+            class="rounded float-start"
+            alt="..."
+            onclick="onImgSelect('car')"
+            style="
+              border: #cbc9c9 3px solid;
+              border-radius: 25px;
+              width: 150px;
+              height: 150px;
+            "
+          />
+        </div>
+        <div class="col-md-2">
+          <img
+            src="./assets/images34.jpg"
+            id="house"
+            class="rounded float-start"
+            alt="..."
+            onclick="onImgSelect('house')"
+            style="
+              border: #cbc9c9 3px solid;
+              border-radius: 25px;
+              width: 150px;
+              height: 150px;
+            "
+          />
+        </div>
+        <div class="col-md-2">
+          <img
+            src="./assets/images79.jpg"
+            id="helicopter"
+            class="rounded float-start"
+            alt="..."
+            onclick="onImgSelect('helicopter')"
+            style="
+              border: #cbc9c9 3px solid;
+              border-radius: 25px;
+              width: 150px;
+              height: 150px;
+            "
+          />
+        </div>
+        <div class="col-md-2">
+          <img
+            src="./assets/images56.jpg"
+            id="kangaroo"
+            class="rounded float-start"
+            alt="..."
+            onclick="onImgSelect('kangaroo')"
+            style="
+              border: #cbc9c9 3px solid;
+              border-radius: 25px;
+              width: 150px;
+              height: 150px;
+            "
+          />
+        </div>
+        <div class="col-md-2">
+          <img
+            src="./assets/images65.jpg"
+            id="pizza"
+            class="rounded float-start"
+            alt="..."
+            onclick="onImgSelect('pizza')"
+            style="
+              border: #cbc9c9 3px solid;
+              border-radius: 25px;
+              width: 150px;
+              height: 150px;
+            "
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" style="margin-top: 5%">
+      <button
+        class="btn btn-primary"
+        id="next"
+        onclick="onNext()"
+        style="margin-left: 48%"
+      >
+        Next
+      </button>
+    </div>
+    <script>
+      function onImgSelect(id) {
+        imgSelected = true;
+        if (document.getElementById(selectImgId)) {
+          document.getElementById(selectImgId).style.border =
+            "#cbc9c9 3px solid";
+        }
+        document.getElementById(id).style.border = "#2DCB1D solid 6px";
+        document.getElementById(id).style.color = "#B2FBAB";
+        selectImgId = id;
+
+        dataLayer[0].formDetails.imageSelected.imageName = id;
+        dataLayer[0].formDetails.imageSelected.imageSource =
+          document.getElementById(id).src;
+      }
+
+      function onNext() {
+        if (imgSelected) {
+          window.location.assign("thank_you_page.html");
+        }
+      }
+    </script>
+  </body>
+</html>
